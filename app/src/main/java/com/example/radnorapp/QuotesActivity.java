@@ -1,14 +1,13 @@
 package com.example.radnorapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.widget.Button;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class QuotesActivity extends AppCompatActivity {
 
@@ -20,6 +19,7 @@ public class QuotesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quotes);
 
         String posAffirmation = getIntent().getStringExtra("Positive_Affirmation");
+        Log.d("Confirm", posAffirmation);
 
         TextView affirmation = (TextView) findViewById(R.id.textAffirmation);
         affirmation.setText(posAffirmation);

@@ -2,18 +2,18 @@ package com.example.radnorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.opencsv.CSVReader;
+import android.view.View;
+import android.util.Log;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.FileReader;
-
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 
 
 public class Feelings extends AppCompatActivity implements View.OnClickListener {
@@ -29,14 +29,17 @@ public class Feelings extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState){
 
+        InputStream is = getResources().openRawResource(R.raw.positive_affirmations);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
         try {
-            CSVReader reader = new CSVReader(new FileReader("positive_affirmations.csv"));
-            quotes1 = reader.readNext();
-            quotes2 = reader.readNext();
-            quotes3 = reader.readNext();
-            quotes4 = reader.readNext();
-            quotes5 = reader.readNext();
-            Log.d("confirm", quotes1[0]);
+            //CSVReader reader = new CSVReader(new FileReader("positive_affirmations.csv"));
+            quotes1 = reader.readLine().split("\\t");
+            quotes2 = reader.readLine().split("\\t");
+            quotes3 = reader.readLine().split("\\t");
+            quotes4 = reader.readLine().split("\\t");
+            quotes5 = reader.readLine().split("\\t");
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -80,28 +83,31 @@ public class Feelings extends AppCompatActivity implements View.OnClickListener 
                 case R.id.feelingOne:
                     randomNum = (int)(Math.random() * quotes1.length);
                     PosAffirmation = quotes1[randomNum];
-                    Log.d("confirm",PosAffirmation);
+                    Log.d("scale 1:", PosAffirmation);
                     break;
                 case R.id.feelingTwo:
                     randomNum = (int)(Math.random() * quotes2.length);
                     PosAffirmation = quotes2[randomNum];
+                    Log.d("scale 2:", PosAffirmation);
                     break;
                 case R.id.feelingThree:
                     randomNum = (int)(Math.random() * quotes3.length);
                     PosAffirmation = quotes3[randomNum];
+                    Log.d("scale 3:", PosAffirmation);
                     break;
                 case R.id.feelingFour:
                     randomNum = (int)(Math.random() * quotes4.length);
                     PosAffirmation = quotes4[randomNum];
+                    Log.d("scale 4:", PosAffirmation);
                     break;
                 case R.id.feelingFive:
                     randomNum = (int)(Math.random() * quotes5.length);
                     PosAffirmation = quotes5[randomNum];
+                    Log.d("scale 5:", PosAffirmation);
                     break;
             }
-
             Intent click = new Intent(getApplicationContext(), QuotesActivity.class);
-            //click.putExtra("Positive_Affimation", PosAffirmation);
+            click.putExtra("Positive_Affirmation", PosAffirmation);
             startActivity(click);
         }
 
