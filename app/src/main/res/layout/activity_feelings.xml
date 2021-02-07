@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2E8FE"
+    tools:context=".Feelings">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="83dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="302dp"
+        android:gravity="center"
+        android:text="Bad day"
+        android:textColor="#221F1F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bad day" />
+
+    <Button
+        android:id="@+id/feelingOne"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="251dp"
+        android:text="1"
+        android:textColor="#171616"
+        app:backgroundTint="#E2E8FE"
+        app:layout_constraintEnd_toStartOf="@+id/feelingTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:contentDescription="@android:string/untitled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/feelings_image" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="334dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:fontFamily="@font/snippet"
+        android:gravity="center"
+        android:text="How are you feeling today?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="How are you feeling today?" />
+
+    <Button
+        android:id="@+id/feelingFour"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="251dp"
+        android:text="4"
+        android:textColor="#171616"
+        app:backgroundTint="#E2E8FE"
+        app:layout_constraintEnd_toStartOf="@+id/feelingFive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/feelingThree"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="83dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="302dp"
+        android:gravity="center"
+        android:text="Great day"
+        android:textColor="#221F1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Great day" />
+
+    <Button
+        android:id="@+id/feelingThree"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="251dp"
+        android:text="3"
+        android:textColor="#171616"
+        app:backgroundTint="#E2E8FE"
+        app:layout_constraintEnd_toStartOf="@+id/feelingFour"
+        app:layout_constraintStart_toEndOf="@+id/feelingTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="3" />
+
+    <Button
+        android:id="@+id/feelingTwo"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="251dp"
+        android:text="2"
+        android:textColor="#171616"
+        app:backgroundTint="#E2E8FE"
+        app:layout_constraintEnd_toStartOf="@+id/feelingThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/feelingOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2" />
+
+    <Button
+        android:id="@+id/feelingFive"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="251dp"
+        android:text="5"
+        android:textColor="#171616"
+        app:backgroundTint="#E2E8FE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/feelingFour"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
