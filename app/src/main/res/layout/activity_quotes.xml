@@ -7,17 +7,6 @@
     android:background="#F8B99A"
     tools:context=".QuotesActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment"
-        android:name="com.example.radnorapp.FirstFragment"
-        android:layout_width="407dp"
-        android:layout_height="268dp"
-        android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="313dp"
@@ -38,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="63dp"
         android:fontFamily="@font/snippet"
-        android:text="@string/title_activity_feelings"
+        android:text="Quote of the Day"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -63,4 +52,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="X" />
+
+    <TextView
+        android:id="@+id/textAffirmation"
+        android:layout_width="409dp"
+        android:layout_height="216dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
