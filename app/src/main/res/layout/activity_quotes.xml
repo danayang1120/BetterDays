@@ -47,4 +47,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Quote Of The Day" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="42dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:fadingEdge="none"
+        android:filterTouchesWhenObscured="false"
+        android:gravity="start|end"
+        android:text="X"
+        android:textColor="#171616"
+        app:backgroundTint="#F8B99A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="X" />
 </androidx.constraintlayout.widget.ConstraintLayout>
